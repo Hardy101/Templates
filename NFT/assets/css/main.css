@@ -1,43 +1,229 @@
 :root {
   --primary: #ffb84c;
   --dark: #191825;
+  --grey: #adb0bc;
+  --sec-dark: #0f161b;
   --poppins: "Poppins", sans-serif;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+* a {
+  text-decoration: none;
 }
 ul {
   list-style-type: none;
 }
-body {
-  font-family: var(--poppins);
+h1,
+h2,
+h3 {
+  font-weight: normal;
 }
+body {
+  position: relative;
+  font-family: regular;
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #202b36a9;
+  z-index: 99;
+}
+nav {
+  position: relative;
+}
+.side_info {
+  width: 450px;
+  position: fixed;
+  right: 0;
+  height: 100%;
+  background: var(--sec-dark);
+  padding: 2rem;
+  color: #fff;
+  font-family: barlow-regular;
+  z-index: 999;
+}
+.close_btn {
+  position: relative;
+  width: 20px;
+  background: transparent;
+  border-radius: 50%;
+  /* padding: 10px; */
+}
+.close_btn > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.side_info > h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: barlow-bold;
+}
+.side_info_h3 {
+  font-family: barlow-medium;
+  text-transform: uppercase;
+  margin: 15px 0;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.side_info_subscribe_h3 {
+  color: #ffb84c;
+}
+.side_info_contact_us,
+.side_info_subscribe {
+  line-height: 3;
+}
+.side_info_subscribe > p {
+  margin-top: 15px;
+  line-height: 1.5;
+  color: var(--grey);
+}
+.side_info_contact_us > ul {
+  list-style-type: none;
+  color: var(--grey);
+}
+.side_info_contact_us > ul > li:before {
+  content: "\25A0";
+  color: var(--grey);
+  margin-right: 15px;
+}
+.side_info_subscribe .form_control {
+  position: relative;
+  background: var(--sec-dark);
+  border: 1px solid #202b36;
+  border-radius: 4px;
+}
+.side_info_subscribe .form_control input {
+  font-family: barlow-regular;
+  background: var(--sec-dark);
+  color: whitesmoke;
+  border: none;
+  padding: 10px 20px;
+
+  font-size: 15px;
+  width: 100%;
+}
+.side_info_subscribe .form_control input:focus {
+  outline: none;
+}
+.side_info_btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 45%;
+  right: 2%;
+  border: none;
+  background: transparent;
+  margin: auto 0;
+  color: #ffb84c;
+  font-size: 20px;
+}
+.side_info_btn::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 90%;
+  left: -10px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--grey);
+}
+.side_info_sm_links {
+  width: 150px;
+  margin-top: 30px;
+}
+.side_info_sm_links a {
+  font-size: 20px;
+  color: var(--grey);
+}
+/*  */
 .nav_menu {
   padding: 2rem 6rem;
+  gap: 30px;
   background: var(--dark);
 }
 .nav_menu,
 .nav_ul {
   display: flex;
   justify-content: space-between;
+  margin: auto 0;
 }
 .logo {
   text-decoration: none;
+  margin: auto 0;
+}
+.nav_ul > li {
+  position: relative;
+  /* background: red; */
 }
 .nav_ul > li > a {
-  margin: 0 10px;
+  margin: 0 20px;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
-  font-weight: bold;
+  font-family: bold;
+  font-size: 14px;
   letter-spacing: 1px;
+}
+.slash_active {
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  left: 45%;
+  top: -24%;
+  transform: translate(-50%, -50%);
+  rotate: -50deg;
+  background: #ffb84c;
+}
+.slash_active.none {
+  display: none;
 }
 .btn {
   border: none;
   background: transparent;
   color: #fff;
   font-family: var(--poppins);
-  font-weight: bold;
+  font-family: bold;
+  margin: auto 0;
+  font-size: 15px;
+  margin: 0 20px;
+}
+.action_menu {
+  margin: auto 0;
+}
+.sign {
+  margin-left: 10px;
+}
+.srch {
+  font-size: 20px;
+}
+.side_toggle {
+  display: flex;
+  flex-direction: column;
+  /* background: red; */
+  overflow: hidden;
+  cursor: pointer;
+}
+.bars {
+  margin: 5px;
+  width: 50px;
+  height: 4px;
+  border-radius: 5px;
+  background: white;
+}
+.bar01,
+.bar03 {
+  width: 30px;
+}
+.side_toggle:hover .bars {
+  width: 50px;
+}
+.bar03 {
+  align-self: flex-end;
 }

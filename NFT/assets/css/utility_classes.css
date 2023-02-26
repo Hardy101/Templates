@@ -1,0 +1,16 @@
+.rel-position {
+  position: relative;
+}
+.no_border {
+  border: none;
+}
+.transparent_bg {
+  background: transparent;
+}
+.center_position {
+  transform: translate(-50%, -50%);
+}
+.justify_content {
+  display: flex;
+  justify-content: space-between;
+}

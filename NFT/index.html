@@ -20,31 +20,85 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/utility_classes.css" />
+    <link rel="stylesheet" href="assets/css/javascript_classes.css" />
     <title>Orton - eSports and Gaming</title>
   </head>
   <body>
+    <!-- Overlay -->
+    <div class="overlay no_display"></div>
     <nav>
+      <div class="side_info side_info_no_width">
+        <button class="close_btn rel-position no_border">
+          <img
+            src="assets/img/swords.png"
+            width="100%"
+            height="100%"
+            class=""
+          />
+        </button>
+        <h2>Get in touch with us with the information below</h2>
+        <div class="side_info_contact_us">
+          <h3 class="side_info_contact_h3 side_info_h3">Contact us</h3>
+          <ul>
+            <li>+234 8133 5600 42</li>
+            <li>eghordia130@gmail.com</li>
+            <li>Try to find me &#128513;</li>
+          </ul>
+        </div>
+        <div class="side_info_subscribe">
+          <h3 class="side_info_subscribe_h3 side_info_h3">subscribe</h3>
+          <form>
+            <div class="form_control">
+              <input type="email" placeholder="Get News & Update" />
+              <button class="side_info_btn">
+                <i class="fa fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+          <p>
+            Thank you for your interest in our content! Subscribe to our
+            newsletter to receive regular updates, exclusive offers, and more.
+          </p>
+        </div>
+        <div class="side_info_sm_links justify_content">
+          <a href="" class="fab fa-facebook"></a>
+          <a href="" class="fab fa-twitter"></a>
+          <a href="" class="fab fa-linkedin"></a>
+          <a href="" class="fab fa-instagram"></a>
+        </div>
+      </div>
       <div class="nav_menu">
         <a href="#" class="logo">Logo</a>
         <ul class="nav_ul">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Tournament</a></li>
-          <li><a href="#">Pages</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><span class="slash_active"></span> <a href="#">Home</a></li>
+          <li>
+            <span class="slash_active none"></span> <a href="#">About us </a>
+          </li>
+          <li>
+            <span class="slash_active none"></span><a href="#">Tournament</a>
+          </li>
+          <li><span class="slash_active none"></span><a href="#">Pages</a></li>
+          <li><span class="slash_active none"></span><a href="#">News</a></li>
+          <li>
+            <span class="slash_active none"></span><a href="#">Contact</a>
+          </li>
         </ul>
         <div class="action_menu">
-          <button class="btn"><i class="fa fa-search"></i></button>
-          <button class="btn"><i class="fa fa-edit"></i> ~SIGN IN</button>
-          <div class="side_toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <button class="btn"><i class="fa fa-search srch"></i></button>
+          <button class="btn">
+            <i class="fa fa-edit acct"></i> <span class="sign">~SIGN IN</span>
+          </button>
+        </div>
+        <div class="side_toggle">
+          <span class="bars bar01"></span>
+          <span class="bars bar02"></span>
+          <span class="bars bar03"></span>
         </div>
         <!-- <button class="toggle_nav"></button> -->
       </div>
     </nav>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
